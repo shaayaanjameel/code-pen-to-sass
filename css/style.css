@@ -1,7 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,800);
-@import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+h1 {
+  text-align: center;
+}
+
 .snip1401 {
-  font-family: 'Playfair Display', Arial, sans-serif;
   position: relative;
   float: left;
   overflow: hidden;
@@ -17,15 +18,14 @@
 }
 
 .snip1401 * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
 
 .snip1401 img {
   max-width: 100%;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .snip1401 figcaption {
@@ -39,14 +39,16 @@
   background-color: #ffffff;
   width: 40%;
   -webkit-transform: translateX(150%);
-  transform: translateX(150%);
+  -ms-transform: translateX(150%);
+      transform: translateX(150%);
 }
 
 .snip1401 figcaption:before {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
   right: 100%;
   content: '';
   width: 0;
@@ -67,8 +69,8 @@
   border-width: 120px 120px 0 120px;
   border-color: rgba(255, 255, 255, 0.5) transparent transparent transparent;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  -webkit-transition: all 0.35s ease;
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
   transition: all 0.35s ease;
 }
 
@@ -76,7 +78,8 @@
 .snip1401 p {
   line-height: 1.5em;
   -webkit-transform: translateX(-30px);
-  transform: translateX(-30px);
+  -ms-transform: translateX(-30px);
+      transform: translateX(-30px);
   margin: 0;
 }
 
@@ -126,7 +129,8 @@
 .snip1401:hover i,
 .snip1401.hover i {
   -webkit-transform: translateX(0);
-  transform: translateX(0);
+  -ms-transform: translateX(0);
+      transform: translateX(0);
   opacity: 1;
 }
 
@@ -140,25 +144,30 @@
   display: -ms-flexbox;
   -ms-flex-flow: row wrap;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 .grid-bottom {
   -webkit-align-items: flex-end;
   -ms-align-items: flex-end;
-  align-items: flex-end;
+  -ms-flex-align: end;
+      align-items: flex-end;
 }
 
 .grid-middle {
   -webkit-align-items: center;
   -ms-align-items: center;
-  align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
 .grid-stretch {
   -webkit-align-items: stretch;
   -ms-align-items: stretch;
-  align-items: stretch;
+  -ms-flex-align: stretch;
+      align-items: stretch;
 }
 
 .opera-only :-o-prefocus, .grid {
@@ -448,7 +457,8 @@
 .content-fill {
   -ms-flex-grow: 2;
   -webkit-flex-grow: 2;
-  flex-grow: 2;
+  -ms-flex-positive: 2;
+      flex-grow: 2;
   max-width: 100%;
   /* @bugfix: IE 10, 11 */
 }
@@ -456,5 +466,6 @@
 .content-shrink {
   -ms-align-self: center;
   -webkit-align-self: center;
-  align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
 }
