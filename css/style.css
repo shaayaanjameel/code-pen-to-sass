@@ -1,8 +1,15 @@
-h1 {
-  text-align: center;
+html {
+  font-family: Helvetica, Arial, sans-serif;
 }
 
-.snip1401 {
+h1 {
+  text-align: center;
+  color: #276ca3;
+  border: solid 3px #e5e5e5;
+  padding: .5em 0;
+}
+
+.pieces {
   position: relative;
   float: left;
   overflow: hidden;
@@ -11,23 +18,22 @@ h1 {
   max-width: 315px;
   max-height: 220px;
   width: 100%;
-  color: #000000;
   text-align: right;
   background-color: #000000;
 }
 
-.snip1401 * {
+.pieces * {
   box-sizing: border-box;
   transition: all 0.35s ease;
 }
 
-.snip1401 img {
+.pieces img {
   max-width: 100%;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
 
-.snip1401 figcaption {
+.pieces figcaption {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -42,7 +48,7 @@ h1 {
       transform: translateX(150%);
 }
 
-.snip1401 figcaption:before {
+.pieces figcaption:before {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -57,7 +63,7 @@ h1 {
   border-color: transparent #ffffff transparent transparent;
 }
 
-.snip1401:after {
+.pieces:after {
   position: absolute;
   bottom: 50%;
   right: 40%;
@@ -73,8 +79,8 @@ h1 {
   transition: all 0.35s ease;
 }
 
-.snip1401 h3,
-.snip1401 p {
+.pieces h3,
+.pieces p {
   line-height: 1.5em;
   -webkit-transform: translateX(-30px);
   -ms-transform: translateX(-30px);
@@ -82,30 +88,32 @@ h1 {
   margin: 0;
 }
 
-.snip1401 h3 {
+.pieces h3 {
   margin: 0 0 5px;
   line-height: 1.1em;
   font-weight: 900;
   font-size: 1.4em;
+  color: #c9e9e6;
   opacity: 0.75;
 }
 
-.snip1401 p {
+.pieces p {
   font-size: 0.8em;
+  color: #38ab96;
 }
 
-.snip1401:hover img,
-.snip1401.hover img {
+.pieces:hover img,
+.pieces.hover img {
   zoom: 1;
   filter: alpha(opacity=50);
   -webkit-opacity: 0.5;
   opacity: 0.5;
 }
 
-.snip1401:hover:after,
-.snip1401.hover:after,
-.snip1401:hover figcaption,
-.snip1401.hover figcaption {
+.pieces:hover:after,
+.pieces.hover:after,
+.pieces:hover figcaption,
+.pieces.hover figcaption {
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
       transform: translateX(0);

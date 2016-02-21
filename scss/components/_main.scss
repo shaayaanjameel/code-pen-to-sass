@@ -1,8 +1,15 @@
-h1 {
-  text-align: center;
+html {
+  font-family: $type;
 }
 
-.snip1401 {
+h1 {
+  text-align: center;
+  color: $primary;
+  border: solid 3px $gray; 
+  padding: .5em 0;
+}
+
+.pieces {
   position: relative;
   float: left;
   overflow: hidden;
@@ -11,24 +18,23 @@ h1 {
   max-width: 315px;
   max-height: 220px;
   width: 100%;
-  color: #000000;
   text-align: right;
-  background-color: #000000;
+  background-color: $black;
 }
 
-.snip1401 * {
+.pieces * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; // aligns both triangles  
   -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
 
-.snip1401 img {
+.pieces img {
   max-width: 100%;
   backface-visibility: hidden;
 }
 
-.snip1401 figcaption {
+.pieces figcaption {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -36,13 +42,13 @@ h1 {
   z-index: 1;
   opacity: 1;
   padding: 30px 0 30px 10px;
-  background-color: #ffffff;
+  background-color: $white;
   width: 40%;
   -webkit-transform: translateX(150%);
   transform: translateX(150%);
 }
 
-.snip1401 figcaption:before {
+.pieces figcaption:before {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -53,10 +59,10 @@ h1 {
   height: 0;
   border-style: solid;
   border-width: 120px 120px 120px 0;
-  border-color: transparent #ffffff transparent transparent;
+  border-color: transparent $white transparent transparent;
 }
 
-.snip1401:after {
+.pieces:after {
   position: absolute;
   bottom: 50%;
   right: 40%;
@@ -72,38 +78,40 @@ h1 {
   transition: all 0.35s ease;
 }
 
-.snip1401 h3,
-.snip1401 p {
+.pieces h3,
+.pieces p {
   line-height: 1.5em;
   -webkit-transform: translateX(-30px);
   transform: translateX(-30px);
   margin: 0;
 }
 
-.snip1401 h3 {
+.pieces h3 {
   margin: 0 0 5px;
   line-height: 1.1em;
   font-weight: 900;
   font-size: 1.4em;
+  color: $light-blue;
   opacity: 0.75; // change according to colour being used
 }
 
-.snip1401 p {
+.pieces p {
   font-size: 0.8em;
+  color: $light-green;
 }
 
-.snip1401:hover img,
-.snip1401.hover img {
+.pieces:hover img,
+.pieces.hover img {
   zoom: 1;
   filter: alpha(opacity=50);
   -webkit-opacity: 0.5;
   opacity: 0.5;
 }
 
-.snip1401:hover:after,
-.snip1401.hover:after,
-.snip1401:hover figcaption,
-.snip1401.hover figcaption, {
+.pieces:hover:after,
+.pieces.hover:after,
+.pieces:hover figcaption,
+.pieces.hover figcaption, {
 // completely makes everything stop working  
   -webkit-transform: translateX(0);
   transform: translateX(0);
