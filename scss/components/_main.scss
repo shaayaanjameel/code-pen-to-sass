@@ -20,19 +20,41 @@ h1 {
   width: 100%;
   text-align: right;
   background-color: $black;
+    * {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; // aligns both triangles  
+      -webkit-transition: all 0.35s ease;
+      transition: all 0.35s ease;  
+    }
+    img {
+      max-width: 100%;
+      backface-visibility: hidden;
+    }
+    h3 {
+      margin: 0 0 5px;
+      line-height: 1.1em;
+      font-weight: 900;
+      font-size: 1.4em;
+      color: $light-blue;
+      opacity: 0.75; 
+    }
+    p {
+      font-size: 0.8em;
+      color: $light-green;
+    }
 }
 
-.pieces * {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; // aligns both triangles  
-  -webkit-transition: all 0.35s ease;
-  transition: all 0.35s ease;
-}
+//.pieces * {
+//  -webkit-box-sizing: border-box;
+//  box-sizing: border-box; // aligns both triangles  
+//  -webkit-transition: all 0.35s ease;
+//  transition: all 0.35s ease;
+//}
 
-.pieces img {
-  max-width: 100%;
-  backface-visibility: hidden;
-}
+//.pieces img {
+//  max-width: 100%;
+//  backface-visibility: hidden;
+//}
 
 .pieces figcaption {
   position: absolute;
@@ -46,37 +68,68 @@ h1 {
   width: 40%;
   -webkit-transform: translateX(150%);
   transform: translateX(150%);
+  &:before {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 100%;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 120px 120px 120px 0;
+    border-color: transparent $white transparent transparent;
+  } 
 }
 
-.pieces figcaption:before {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  right: 100%;
-  content: '';
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 120px 120px 120px 0;
-  border-color: transparent $white transparent transparent;
+//.pieces figcaption:before {
+//  position: absolute;
+//  top: 50%;
+//  -webkit-transform: translateY(-50%);
+//  transform: translateY(-50%);
+//  right: 100%;
+//  content: '';
+//  width: 0;
+//  height: 0;
+//  border-style: solid;
+//  border-width: 120px 120px 120px 0;
+//  border-color: transparent $white transparent transparent;
+//}
+
+.pieces {
+  &:after {
+    position: absolute;
+    bottom: 50%;
+    right: 40%;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 120px 120px 0 120px;
+    border-color: rgba(255, 255, 255, 0.5) transparent transparent transparent;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+  }
 }
 
-.pieces:after {
-  position: absolute;
-  bottom: 50%;
-  right: 40%;
-  content: '';
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 120px 120px 0 120px;
-  border-color: rgba(255, 255, 255, 0.5) transparent transparent transparent;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  -webkit-transition: all 0.35s ease;
-  transition: all 0.35s ease;
-}
+//.pieces:after {
+//  position: absolute;
+//  bottom: 50%;
+//  right: 40%;
+//  content: '';
+//  width: 0;
+//  height: 0;
+//  border-style: solid;
+//  border-width: 120px 120px 0 120px;
+//  border-color: rgba(255, 255, 255, 0.5) transparent transparent transparent;
+//  -webkit-transform: translateY(-50%);
+//  transform: translateY(-50%);
+//  -webkit-transition: all 0.35s ease;
+//  transition: all 0.35s ease;
+//}
 
 .pieces h3,
 .pieces p {
@@ -86,19 +139,19 @@ h1 {
   margin: 0;
 }
 
-.pieces h3 {
-  margin: 0 0 5px;
-  line-height: 1.1em;
-  font-weight: 900;
-  font-size: 1.4em;
-  color: $light-blue;
-  opacity: 0.75; // change according to colour being used
-}
+//.pieces h3 {
+//  margin: 0 0 5px;
+//  line-height: 1.1em;
+//  font-weight: 900;
+//  font-size: 1.4em;
+//  color: $light-blue;
+//  opacity: 0.75; // change according to colour being used
+//}
 
-.pieces p {
-  font-size: 0.8em;
-  color: $light-green;
-}
+//.pieces p {
+//  font-size: 0.8em;
+//  color: $light-green;
+//}
 
 .pieces:hover img,
 .pieces.hover img {
